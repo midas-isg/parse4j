@@ -233,6 +233,10 @@ public class ParseObject {
 		List<T> returnValue = (List<T>) value;
 		return returnValue;
 	}
+
+	public List<String> getDirtyKeys() {
+		return dirtyKeys;
+	}
 	
     @SuppressWarnings("unchecked")
     public <T extends ParseObject> T getParseObject(String key) {
