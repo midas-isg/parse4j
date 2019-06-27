@@ -35,10 +35,12 @@ public class Parse {
 		bCustomServer = false;
 	}
 
-	static public void initialize(String applicationId, String restAPIKey, String serverPath) {
+	static public void initialize(String applicationId, String restAPIKey, String serverPath, boolean isRootMode) {
 		mApplicationId = applicationId;
 		mRestAPIKey = restAPIKey;
-		isRootMode = false;
+		Parse.isRootMode = isRootMode;
+		if (isRootMode)
+			mMasterKey = "1";
 		sServerPath = serverPath;
 		bCustomServer = true;
 	}
